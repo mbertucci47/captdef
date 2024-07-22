@@ -24,13 +24,13 @@ This package defines a means of defining caption commands, which
 creates things that look as if they were created by \cs{caption}, and
 which work outside of a float.
 
-The \textsf{float} package provides an alternative to
-\cs{captdef}-defined commands, in the float \texttt{[H]} option
+The \Package{float} package provides an alternative to
+\cs{DeclareCaption}-defined commands, in the float \texttt{[H]} option
 (``place the environment \emph{here} without doing any of this
 floating stuff'').  So why use \Package{captdef}?\,---\,its great
 advantage is simplicity; you load it, and it defines just \emph{three}
 macros, while \textsf{float} defines lots and lots.  (Of course, if
-you need others of \textsf{float}'s capabilities, \textsf{captdef}
+you need others of \textsf{float}'s capabilities, \Package{captdef}
 loses its advantage\dots).
 
 \section{How the package works}
@@ -45,13 +45,13 @@ for its numbering.
 The package then goes on to declare the commonly-needed caption
 commands \cs{figcaption} and \cs{tabcaption}:
 \begin{quote}
-  \cmdinvoke{captdef}{\cs{figcaption}}{figure}\\
-  \cmdinvoke{captdef}{\cs{tabcaption}}{table}
+  \cmdinvoke{DeclareCaption}{\cs{figcaption}}{figure}\\
+  \cmdinvoke{DeclareCaption}{\cs{tabcaption}}{table}
 \end{quote}
 
 \section{The potential problem}
 
-Commands defined by \cs{captdef} place a caption in text, and also step the
+Commands defined by \cs{DeclareCaption} place a caption in text, and also step the
 \environment{figure} (or \environment{table} or whatever) counter.  The float
 environments do the same.
 
@@ -96,7 +96,7 @@ keeps floats of the same type in order (which is why floats stack up
 if a single one won't fit).
 
 The moral of that little tale is to say: don't use
-\cs{captdef}-defined commands with floats of the same type in the same
+\cs{DeclareCaption}-defined commands with floats of the same type in the same
 document.  (Or be extra-specially careful about what's happening if
 you must.)
 \end{document}
