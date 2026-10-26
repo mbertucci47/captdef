@@ -1,6 +1,8 @@
+\DocumentMetadata{tagging=on,pdfstandard={UA-2,A-4f}}
 \documentclass[a4paper]{l3in2edoc}
-\fvset{gobble=0}
+\usepackage{lua-unicode-math}
 \usepackage[a4paper]{geometry}
+\fvset{gobble=0}
 \pdfstringdefDisableCommands{\def\url#1{#1}}
 \begin{document}
 \title{The \pkg{captdef} package}
@@ -41,18 +43,19 @@ loses its advantage\dots).
 \section{How the package works}
 
 The package defines a command
-\begin{syntax}
+\begin{quote}
  \cs{DeclareCaption}\marg{command}\marg{counter}
-\end{syntax}
+\end{quote}
 which creates a `caption'-like command, which uses \texttt{counter}
 for its numbering.
 
 The package then goes on to declare the commonly-needed caption
 commands \cs{figcaption} and \cs{tabcaption}:
-\begin{syntax}
- \cs{DeclareCaption}\{\cs{figcaption}\}\{figure\}
+\begin{quote}
+ \ttfamily
+ \cs{DeclareCaption}\{\cs{figcaption}\}\{figure\}\\
  \cs{DeclareCaption}\{\cs{tabcaption}\}\{table\}
-\end{syntax}
+\end{quote}
 
 \section{The potential problem}
 
