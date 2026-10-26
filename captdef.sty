@@ -2,13 +2,15 @@
 %   captdef.sty: a trivial package to define captions that don't have
 %   to be in floats.
 %
-% Author: Robin Fairbairns <rf10@cam.ac.uk>
-%         Conceived ages ago, but written 1998/12/17
+%     Author: Robin Fairbairns
+%             Conceived ages ago, but written 1998/12/17
+% Maintainer: LaTeX Project Team
+%             https://github.com/LaTeX-Package-Repositories/captdef
 %
 %   This program can redistributed and/or modified under the terms
 %   of the LaTeX Project Public License Distributed from CTAN
 %   archives in directory macros/latex/base/lppl.txt; either
-%   version 1 of the License, or (at your option) any later version.
+%   version 1.3c of the License, or (at your option) any later version.
 %
 % Usage: \DeclareCaption{command}{counter}
 %
@@ -17,10 +19,10 @@
 %
 % The package then goes on to use this command to declare the most
 % commonly required pair of non-float captions, \figcaption and
-% \tabcaption
+% \tabcaption.
 
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesPackage{captdef}[1998/12/17 non-floating captions]
+\ProvidesPackage{captdef}[2026/10/26 non-floating captions]
 
 \newcommand{\DeclareCaption}[2]{%
   \def#1{\def\@captype{#2}\caption}%
